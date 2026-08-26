@@ -50,7 +50,7 @@ func users(w http.ResponseWriter, r *http.Request) {
 
 	if err := json.NewEncoder(w).Encode(users); err != nil {
 		log.Printf("failed to encode users: %v", err)
-		http.Error(w, "internal server error", http.StatusInternalServerError)
+		http.Error(w, "internal server error ", http.StatusInternalServerError)
 	}
 }
 
